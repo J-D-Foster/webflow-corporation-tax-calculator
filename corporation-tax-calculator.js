@@ -20,7 +20,7 @@ function calculateCorporationTax(profits) {
         taxLiability = smallProfitsTax + mainRateTax;
     }
 
-    return taxLiability;
+    return taxLiability;LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 }
 
 function calculateTax(event) {
