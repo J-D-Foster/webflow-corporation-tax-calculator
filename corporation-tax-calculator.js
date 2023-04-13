@@ -30,7 +30,7 @@ function calculateTax() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("taxCalculationForm");
+    const form = document.querySelector("form");
     form.setAttribute("onsubmit", "return false;");
     document.getElementById("calculateButton").addEventListener("click", calculateTax);
 });
