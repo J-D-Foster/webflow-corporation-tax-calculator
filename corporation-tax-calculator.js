@@ -31,5 +31,8 @@ function calculateTax(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("calculateButton").addEventListener("click", calculateTax);
+    const formElement = document.getElementById("taxCalculationForm");
+    if (formElement) {
+        formElement.addEventListener("submit", calculateTax);
+    }
 });
