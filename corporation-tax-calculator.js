@@ -23,13 +23,14 @@ function calculateCorporationTax(profits) {
     return taxLiability;
 }
 
-function calculateTax(event) {
-    event.preventDefault();
+function calculateTax() {
     const taxableProfits = parseFloat(document.getElementById("taxableProfits").value);
     const corporationTax = calculateCorporationTax(taxableProfits);
     document.getElementById("result").innerText = `Your corporation tax liability is: £${corporationTax.toFixed(2)}`;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("taxCalculationForm").addEventListener("submit", calculateTax);
+    const form = document.getElementById("taxCalculationForm");
+    form.setAttribute("onsubmit", "return false;");
+    document.getElementById("calculateButton").addEventListener("click", calculateTax);
 });
